@@ -1,0 +1,14 @@
+.aidp/
+.oci/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.pem
+*.key
+*.zip
+*.whl
+*.tgz
+node_modules/
+.DS_Store
+Thumbs.db

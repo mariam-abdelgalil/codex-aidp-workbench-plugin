@@ -1,0 +1,39 @@
+{
+  "name": "codex-aidp-workbench",
+  "version": "0.1.0",
+  "description": "Codex skills for Oracle AI Data Platform Workbench operations through the AIDP CLI and OCI-authenticated REST APIs.",
+  "author": {
+    "name": "Mariam Abdelgalil"
+  },
+  "homepage": "https://docs.oracle.com/en/cloud/paas/ai-data-platform/",
+  "repository": "https://github.com/mariamabdelgalil/codex-aidp-workbench",
+  "license": "UPL-1.0",
+  "keywords": [
+    "oracle",
+    "aidp",
+    "data-platform",
+    "spark",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Oracle AIDP Workbench",
+    "shortDescription": "Operate Oracle AI Data Platform Workbench from Codex.",
+    "longDescription": "A Codex plugin with skills for Oracle AI Data Platform Workbench: clusters, catalog discovery, Spark SQL, Delta Lake DDL and DML, ingestion, pipelines, governance, MLOps, agent flows, and workspace operations. It uses the official aidp CLI where available and OCI-authenticated REST fallbacks where documented.",
+    "developerName": "Mariam Abdelgalil",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://docs.oracle.com/en/cloud/paas/ai-data-platform/",
+    "privacyPolicyURL": "https://www.oracle.com/legal/privacy/",
+    "termsOfServiceURL": "https://www.oracle.com/legal/terms.html",
+    "defaultPrompt": [
+      "List my AIDP workspaces and clusters.",
+      "Create an AIDP Spark cluster with defaults.",
+      "Explore my AIDP catalog schemas and tables."
+    ],
+    "brandColor": "#C74634"
+  }
+}

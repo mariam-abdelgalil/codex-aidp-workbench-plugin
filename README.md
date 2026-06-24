@@ -48,7 +48,7 @@ For Spark SQL and notebook execution through `scripts/aidp_sql.py`, install the
 Python helper dependencies:
 
 ```bash
-python -m pip install -r scripts/requirements.txt
+python -m pip install -r plugins/codex-aidp-workbench/scripts/requirements.txt
 ```
 
 ## Install The AIDP CLI
@@ -172,14 +172,30 @@ Clone this repository:
 git clone https://github.com/mariam-abdelgalil/codex-aidp-workbench-plugin.git
 ```
 
-Install or enable the local plugin in Codex using the plugin installation
-mechanism available in your Codex build. Common local-plugin flows look like:
+Add the cloned repository as a Codex plugin marketplace:
 
 ```bash
-codex plugin install /path/to/codex-aidp-workbench-plugin
+codex plugin marketplace add /path/to/codex-aidp-workbench-plugin
 ```
 
-or adding the folder through the Codex app/plugin UI.
+Then install the plugin from that marketplace:
+
+```bash
+codex plugin add codex-aidp-workbench@mariam-aidp
+```
+
+You can also add the GitHub repository directly as a marketplace:
+
+```bash
+codex plugin marketplace add mariam-abdelgalil/codex-aidp-workbench-plugin
+codex plugin add codex-aidp-workbench@mariam-aidp
+```
+
+Verify installation:
+
+```bash
+codex plugin list
+```
 
 After enabling the plugin, start a new Codex session so the skills are loaded.
 
@@ -228,10 +244,10 @@ The skills use two execution paths:
 
 Relevant references:
 
-- `references/aidp-cli-map.md`
-- `references/oci-raw-request.md`
-- `references/no-mcp-rest-map.md`
-- `references/rest-endpoint-map.md`
+- `plugins/codex-aidp-workbench/references/aidp-cli-map.md`
+- `plugins/codex-aidp-workbench/references/oci-raw-request.md`
+- `plugins/codex-aidp-workbench/references/no-mcp-rest-map.md`
+- `plugins/codex-aidp-workbench/references/rest-endpoint-map.md`
 
 ## What Not To Commit
 

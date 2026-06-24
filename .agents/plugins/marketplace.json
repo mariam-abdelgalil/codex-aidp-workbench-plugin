@@ -1,0 +1,20 @@
+{
+  "name": "mariam-aidp",
+  "interface": {
+    "displayName": "Mariam AIDP Plugins"
+  },
+  "plugins": [
+    {
+      "name": "codex-aidp-workbench",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-aidp-workbench"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

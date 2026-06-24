@@ -199,6 +199,12 @@ codex plugin list
 
 After enabling the plugin, start a new Codex session so the skills are loaded.
 
+Users do not need to open this plugin folder as their Codex project. After the
+marketplace and plugin are added, Codex can use the plugin from any workspace.
+Keep the cloned plugin folder in place, because the marketplace source points to
+that local path. If the folder is moved or deleted, re-add the marketplace from
+the new clone location.
+
 Codex loads the skill files from `skills/`. When a user asks an AIDP task,
 Codex reads the relevant `SKILL.md` file and uses the local `aidp` CLI or the
 documented OCI REST fallback to perform the operation.

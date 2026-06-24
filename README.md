@@ -29,12 +29,18 @@ tooling and access to their own AIDP environment.
 Required:
 
 - Codex with local plugin support.
-- Python 3.9 or later.
-- `pip`, usually available as `python -m pip`.
+- Python 3.9 or later. Download from
+  <https://www.python.org/downloads/>. On Windows, enable **Add python.exe to
+  PATH** during installation.
+- `pip`, usually available as `python -m pip` after Python is installed.
 - A working terminal where `python --version` and `python -m pip --version`
   succeed.
-- Oracle `aidp` CLI installed and available on `PATH`.
-- A valid OCI profile in `~/.oci/config`.
+- Oracle `aidp` CLI installed and available on `PATH`. Download the AIDP CLI
+  release assets from
+  <https://github.com/oracle-samples/aidataplatform-sdk/releases/tag/v1.0.2>.
+- OCI auth configured in `~/.oci/config`. For OCI config setup, see Oracle's
+  SDK/CLI config docs:
+  <https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm>.
 - Permission to access the target Oracle AIDP instance and workspace.
 - The user's own AIDP instance OCID, region, and workspace key.
 
@@ -85,6 +91,30 @@ If `aidp` is installed but not found, add your Python user scripts directory to
 
 ```text
 C:\Users\<you>\AppData\Roaming\Python\Python314\Scripts
+```
+
+Windows PowerShell example:
+
+```powershell
+$scripts = "$env:APPDATA\Python\Python314\Scripts"
+[Environment]::SetEnvironmentVariable(
+  "Path",
+  [Environment]::GetEnvironmentVariable("Path", "User") + ";$scripts",
+  "User"
+)
+```
+
+Close and reopen the terminal, then verify:
+
+```bash
+aidp --help
+```
+
+Git Bash temporary PATH example for the current terminal session:
+
+```bash
+export PATH="$HOME/AppData/Roaming/Python/Python314/Scripts:$PATH"
+aidp --help
 ```
 
 ## Configure OCI Auth
